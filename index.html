@@ -93,7 +93,7 @@
     }
     .card .content{padding:12px 14px; display:flex; flex-direction:column; gap:8px}
     .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      border:1px solid var(--border); padding:10px 12px; border-radius:12px; font-weight:700; cursor:pointer; background:#161616; color:var(--text)}
+      border:1px solid var(--border); padding:10px 12px; border-radius:12px; font-weight:700; cursor:pointer; background:#161616; color:#f5f5f5}
     .btn:hover{filter:brightness(1.06)}
     .btn.brand{background:linear-gradient(90deg, var(--brand), var(--brand-2)); border-color:transparent}
 
@@ -113,87 +113,45 @@
 
     /* Botão fixo WhatsApp */
     .floating{position:fixed; right:14px; bottom:14px; z-index:70;}
-    .floating .btn{box-shadow:0 10px 30px rgba(0,0,0,.5); background:#25d366; border-color:#1ebe5b; color:#fff}/* Footer */
-footer {
-  background: var(--card);
-  padding: 30px 20px 0;
-  color: var(--text);
-  font-size: 0.85rem; /* <<< fonte menor padrão */
-}
+    .floating .btn{box-shadow:0 10px 30px rgba(0,0,0,.5); background:#25d366; border-color:#1ebe5b; color:#fff}
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
-  text-align: left;
-}
-
-.footer-card {
-  padding: 5px;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.footer-brand img {
-  height: 182px; /* logo menor */
-}
-
-.footer-card h4 {
-  margin: 10px 0 8px;
-  font-size: 0.95rem;
-  color: var(--brand);
-}
-
-.footer-card p,
-.footer-card li {
-  margin: 4px 0;
-  color: #bbb;
-  font-size: 0.85rem;
-  line-height: 1.4;
-}
-
-/* Redes sociais */
-.socials {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-.socials img {
-  width: 18px;
-  height: 18px;
-  opacity: 0.8;
-  transition: opacity .3s;
-}
-.socials img:hover {
-  opacity: 1;
-}
-
-.copy {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 0.75rem; /* bem discreto */
-  color: #aaa;
-  border-top: 1px solid var(--border);
-  padding: 10px 0;
-}
-
-/* Ajuste específico desktop */
-@media (min-width: 900px) {
-  footer {
-    font-size: 0.8rem;
-  }
-  .footer-card h4 {
-    font-size: 0.9rem;
-  }
-}
-
+    /* Footer */
+    footer {
+      background: var(--card);
+      padding: 30px 20px 0;
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: left;
+    }
+    .footer-card { padding: 5px; }
+    .footer-brand {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+    }
+    .footer-brand img { height: 182px; }
+    .footer-card h4 {
+      margin: 10px 0 8px; font-size: 0.95rem; color: var(--brand);
+    }
+    .footer-card p, .footer-card li {
+      margin: 4px 0; color: #bbb; font-size: 0.85rem; line-height: 1.4;
+    }
+    .socials { margin-top: 10px; display: flex; gap: 10px; }
+    .socials img { width: 18px; height: 18px; opacity: 0.8; transition: opacity .3s; }
+    .socials img:hover { opacity: 1; }
+    .copy {
+      margin-top: 20px; text-align: center; font-size: 0.75rem; color: #aaa;
+      border-top: 1px solid var(--border); padding: 10px 0;
+    }
+    @media (min-width: 900px) {
+      footer { font-size: 0.8rem; }
+      .footer-card h4 { font-size: 0.9rem; }
+    }
 
     /* Drawer */
     .drawer{position:fixed; inset:0; display:none; z-index:100}
@@ -223,7 +181,7 @@ footer {
     <!-- SLIDER -->
     <div class="slider" id="slider">
       <div class="slides">
-        <img src="portaria.jpg" alt="Vigilancia Portaria 24h">
+        <img src="portaria.jpg" alt="Portaria 24h">
         <img src="limpeza.jpg" alt="Roçagem e Conservação">
         <img src="zeladoria.jpg" alt="Zeladoria e Apoio">
       </div>
@@ -245,7 +203,8 @@ footer {
         <article class="card">
           <img src="placa.jpg" alt="Limpeza Profissinal">
           <div class="content">
-            <h3>Limpeza Profissinal</h3>Com a nossa limpeza profissional de placas solares, garantimos: maior vida útil para seu investimento, eficiência máxima desde o primeiro raio de sol, seu sistema trabalhando no pico da performance. Evite o acúmulo de sujeira que pode danificar os módulos.
+            <h3>Limpeza Profissinal</h3>
+            Com a nossa limpeza profissional de placas solares, garantimos: maior vida útil para seu investimento, eficiência máxima desde o primeiro raio de sol, seu sistema trabalhando no pico da performance. Evite o acúmulo de sujeira que pode danificar os módulos.
             <p></p>
             <a class="btn" href="seco.html">Saiba mais</a>
           </div>
@@ -270,31 +229,26 @@ footer {
         </article>
       </div>
     </section>
-<!-- CTA -->
-<section>
-  <div class="cta">
-    <div>
-      <h3>GRUPO SENTINEL</h3>
-      <p class="cta-legend">DF • GO • RJ • MG</p>
 
-      <!-- Descrição menor -->
-      <p style="font-size:0.9rem; color:#bbb; margin-top:10px; line-height:1.5;">
-        A <strong>Sentinel</strong> é especializada na gestão de comodidades e terceirização de mão de obra qualificada,
-        oferecendo soluções completas para:
-        <br>• Condomínios  
-        • Usinas Solares  
-        • Empresas de pequeno e grande porte
-      </p>
-
-      <a class="btn brand" href="https://desenvolvedorawellington.github.io/SENTINEL-facilite/" target="_blank">
-        <img src="whatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Falar agora
-      </a>
-    </div>
-    <div class="cta-media">
-      <img src="equipe.png" alt="Equipe Sentinel" />
-    </div>
-  </div>
-</section>
+    <!-- CTA -->
+    <section>
+      <div class="cta">
+        <div>
+          <h3>GRUPO SENTINEL</h3>
+          <p class="cta-legend">DF • GO • RJ • MG</p>
+          <p style="font-size:0.9rem; color:#bbb; margin-top:10px; line-height:1.5;">
+            A <strong>Sentinel</strong> é especializada na gestão de comodidades e terceirização de mão de obra qualificada,
+            oferecendo soluções completas para:
+            <br>• Condomínios
+            • Usinas Solares
+            • Empresas de pequeno e grande porte
+          </p>
+          <a class="btn brand" href="https://desenvolvedorawellington.github.io/SENTINEL-facilite/" target="_blank">
+            <img src="whatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Falar agora
+          </a>
+        </div>
+        <div class="cta-media">
+          <img src="equipe.png" alt="Equipe Sentinel" />
         </div>
       </div>
     </section>
@@ -303,46 +257,47 @@ footer {
   <!-- Botão fixo WhatsApp -->
   <div class="floating">
     <a class="btn" href="https://desenvolvedorawellington.github.io/SENTINEL-facilite/" target="_blank">
-      <img src="whatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Atendimento Virtual 
+      <img src="whatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Atendimento Virtual
     </a>
-  </div><footer>
-  <div class="footer-grid">
-    <!-- Logo + descrição + redes -->
-    <div class="footer-card">
-      <div class="footer-brand">
-        <img src="logo1.png" alt="Logo">
-        <strong></strong>
-      </div>
-      <p>Temos o que você quer, somos o que você precisa.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/sentinelfacilities?igsh=YTlmbzJmdzN6bDFq"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/share/1GpipHKhqw/"><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://wa.me/556193249005"><img src="whatsapp1.png" alt="WhatsApp"></a>
-      </div>
-    </div>
-
-    <!-- Contato -->
-    <div class="footer-card">
-      <h4>Contato</h4>
-      <ul>
-        <li>📞 (61) 99668-1574</li>
-        <li>📩 comercial@gruposentinel.com.br</li>
-        <li>📍 Brasília / DF</li>
-      </ul>
-    </div>
-
-    <!-- Endereço -->
-    <div class="footer-card">
-      <h4>Endereço</h4>
-      <p>UF de atuação<br>DF – GO – RJ – MG</p>
-    </div>
   </div>
 
-  <div class="copy">
-    ©2025 <strong>Grupo Sentinel</strong> — Todos os direitos reservados
-  </div>
-</footer>
+  <footer>
+    <div class="footer-grid">
+      <!-- Logo + descrição + redes -->
+      <div class="footer-card">
+        <div class="footer-brand">
+          <img src="logo1.png" alt="Logo">
+          <strong></strong>
+        </div>
+        <p>Temos o que você quer, somos o que você precisa.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/sentinelfacilities?igsh=YTlmbzJmdzN6bDFq"><img src="instagram.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com/share/1GpipHKhqw/"><img src="facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/556193249005"><img src="whatsapp1.png" alt="WhatsApp"></a>
+        </div>
+      </div>
 
+      <!-- Contato -->
+      <div class="footer-card">
+        <h4>Contato</h4>
+        <ul>
+          <li>📞 (61) 99668-1574</li>
+          <li>📩 comercial@gruposentinel.com.br</li>
+          <li>📍 Brasília / DF</li>
+        </ul>
+      </div>
+
+      <!-- Endereço -->
+      <div class="footer-card">
+        <h4>Endereço</h4>
+        <p>UF de atuação<br>DF – GO – RJ – MG</p>
+      </div>
+    </div>
+
+    <div class="copy">
+      ©2025 <strong>Grupo Sentinel</strong> — Todos os direitos reservados
+    </div>
+  </footer>
 
   <!-- Drawer -->
   <div class="drawer" id="menuDrawer">
@@ -375,105 +330,7 @@ footer {
       if(e.target.matches('[data-close]') || e.target === drawer.querySelector('.backdrop')) closeDrawer();
     });
 
-    // Slider
-    const slider = document.getElementById('slider');
-    const slidesEl = slider.querySelector('.slides');
-    const totalSlides = slidesEl.children.length;
-    const prevBtn = slider.querySelector('.prev');
-    const nextBtn = slider.querySelector('.next');
-
-    let index = 0;
-    let autoPlay = setInterval(nextSlide, 4000);
-
-    function showSlide(i){
-      index = (i + totalSlides) % totalSlides;
-      slidesEl.style.transform = `translateX(-${index * 100}%)`;
-    }
-    function nextSlide(){ showSlide(index + 1); }
-    function prevSlide(){ showSlide(index - 1); }
-
-    nextBtn.addEventListener('click', ()=>{
-      nextSlide();
-      resetAuto();
-    });
-    prevBtn.addEventListener('click', ()=>{
-      prevSlide();
-      resetAuto();
-    });
-
-    function resetAuto(){
-      clearInterval(autoPlay);
-      autoPlay = setInterval(nextSlide, 4000);
- 
-    <!-- Logo + descrição + redes -->
-    <div class="footer-card">
-      <div class="footer-brand">
-        <img src="logo1.png" alt="Logo">
-        <strong></strong>
-      </div>
-      <p>Temos o que você quer, somos o que você precisa.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/sentinelfacilities?igsh=YTlmbzJmdzN6bDFq"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/share/1GpipHKhqw/"><img src="facebook.png" alt="Facebook"></a>
-        <a href=""><img src="whatsapp1.png" alt="WhatsApp"></a>
-      </div>
-    </div>
-
-    <!-- Contato -->
-    <div class="footer-card">
-      <h4>Contato</h4>
-      <ul>
-        <li>📞 (61) 99668-1574</li>
-        <li>📩 comercial@gruposentinel.com.br</li>
-        <li>📍 Brasília / DF</li>
-      </ul>
-    </div>
-
-    <!-- Endereço -->
-    <div class="footer-card">
-      <h4>Endereço</h4>
-      <p>UF de atuação<br>DF – GO – RJ – MG</p>
-    </div>
-  </div>
-
-  <div class="copy">
-    ©2025 <strong>Grupo Sentinel</strong> — Todos os direitos reservados
-  </div>
-</footer>
-
-
-  <!-- Drawer -->
-  <div class="drawer" id="menuDrawer">
-    <div class="backdrop" data-close></div>
-    <div class="panel">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px">
-        <h4 id="menuTitle">Menu</h4>
-        <button class="btn" data-close>✕</button>
-      </div>
-      <nav class="nav-list">
-        <a href="index.html">Home</a>
-        <a href="zeladoria.html">Zeladoria</a>
-        <a href="portaria.html">Vigilância  e Portaria 24h</a>
-        <a href="roçagem.html">Roçagem</a>
-        <a href="seco.html">Limpeza a seco</a>
-        <a href="agua.html">Limpeza com água</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
-  </div>
-
-  <script>
-    // Menu drawer
-    const drawer = document.getElementById('menuDrawer');
-    const openBtn = document.getElementById('openMenu');
-    function closeDrawer(){drawer.classList.remove('active');}
-    function openDrawer(){drawer.classList.add('active');}
-    openBtn.addEventListener('click', openDrawer);
-    drawer.addEventListener('click', (e)=>{
-      if(e.target.matches('[data-close]') || e.target === drawer.querySelector('.backdrop')) closeDrawer();
-    });
-
-    // Slider
+    // Slider (mesmas funções, apenas script limpo)
     const slider = document.getElementById('slider');
     const slidesEl = slider.querySelector('.slides');
     const totalSlides = slidesEl.children.length;
@@ -503,6 +360,9 @@ footer {
       clearInterval(autoPlay);
       autoPlay = setInterval(nextSlide, 4000);
     }
+
+    // garante início na primeira imagem
+    showSlide(0);
   </script>
 </body>
-  </html>
+</html>
