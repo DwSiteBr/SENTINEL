@@ -243,10 +243,15 @@ footer {
     <section>
       <div class="grid cards">
         <article class="card">
-          <img src="seco.jpg" alt="Limpeza Profissinal">
+          <img src="placa.jpg" alt="Limpeza Profissinal">
           <div class="content">
             <h3>Limpeza Profissinal</h3>
-            <p>Limpeza a seco de módulos solares com robô. Com a tecnologia de limpeza automática do Grupo Sentinel, seus painéis permanecem impecáveis, garantindo mais produtividade e energia limpa todos os dias.</p>
+            <p>Com a nossa limpeza profissional de placas solares, garantimos:
+Maior vida útil para seu investimento: Evite o acúmulo que pode danificar as células.
+
+Eficiência máxima desde o primeiro raio de sol: Seu sistema trabalhando no pico da performance.
+
+Não deixe seu investimento em energia solar perder o brilho!</p>
             <a class="btn" href="seco.html">Saiba mais</a>
           </div>
         </article>
@@ -304,6 +309,110 @@ footer {
   <div class="floating">
     <a class="btn" href="https://desenvolvedorawellington.github.io/SENTINEL-facilite/" target="_blank">
       <img src="whatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Atendimento Virtual 
+    </a>
+  </div><footer>
+  <div class="footer-grid">
+    <!-- Logo + descrição + redes -->
+    <div class="footer-card">
+      <div class="footer-brand">
+        <img src="logo1.png" alt="Logo">
+        <strong></strong>
+      </div>
+      <p>Temos o que você quer, somos o que você precisa.</p>
+      <div class="socials">
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="whatsapp1.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-card">
+      <h4>Contato</h4>
+      <ul>
+        <li>📞 (61) 99668-1574</li>
+        <li>📩 comercial@gruposentinel.com.br</li>
+        <li>📍 Brasília / DF</li>
+      </ul>
+    </div>
+
+    <!-- Endereço -->
+    <div class="footer-card">
+      <h4>Endereço</h4>
+      <p>UF de atuação<br>DF – GO – RJ – MG</p>
+    </div>
+  </div>
+
+  <div class="copy">
+    ©2025 <strong>Grupo Sentinel</strong> — Todos os direitos reservados
+  </div>
+</footer>
+
+
+  <!-- Drawer -->
+  <div class="drawer" id="menuDrawer">
+    <div class="backdrop" data-close></div>
+    <div class="panel">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px">
+        <h4 id="menuTitle">Menu</h4>
+        <button class="btn" data-close>✕</button>
+      </div>
+      <nav class="nav-list">
+        <a href="index.html">Home</a>
+        <a href="zeladoria.html">Zeladoria</a>
+        <a href="portaria.html">Vigilância  e Portaria 24h</a>
+        <a href="roçagem.html">Roçagem</a>
+        <a href="seco.html">Limpeza a seco</a>
+        <a href="agua.html">Limpeza com água</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    // Menu drawer
+    const drawer = document.getElementById('menuDrawer');
+    const openBtn = document.getElementById('openMenu');
+    function closeDrawer(){drawer.classList.remove('active');}
+    function openDrawer(){drawer.classList.add('active');}
+    openBtn.addEventListener('click', openDrawer);
+    drawer.addEventListener('click', (e)=>{
+      if(e.target.matches('[data-close]') || e.target === drawer.querySelector('.backdrop')) closeDrawer();
+    });
+
+    // Slider
+    const slider = document.getElementById('slider');
+    const slidesEl = slider.querySelector('.slides');
+    const totalSlides = slidesEl.children.length;
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+
+    let index = 0;
+    let autoPlay = setInterval(nextSlide, 4000);
+
+    function showSlide(i){
+      index = (i + totalSlides) % totalSlides;
+      slidesEl.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function nextSlide(){ showSlide(index + 1); }
+    function prevSlide(){ showSlide(index - 1); }
+
+    nextBtn.addEventListener('click', ()=>{
+      nextSlide();
+      resetAuto();
+    });
+    prevBtn.addEventListener('click', ()=>{
+      prevSlide();
+      resetAuto();
+    });
+
+    function resetAuto(){
+      clearInterval(autoPlay);
+      autoPlay = setInterval(nextSlide, 4000);
+    }
+  </script>
+</body>
+                               </html>hatsapp.png" alt="WhatsApp" style="height:20px;width:20px"> Atendimento Virtual 
     </a>
   </div><footer>
   <div class="footer-grid">
