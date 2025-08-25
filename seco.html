@@ -30,7 +30,7 @@
       font-weight:600; color:var(--text); text-decoration:none;
     }
 
-    /* Hero compacto */
+    /* Hero */
     .hero{
       display:grid; grid-template-columns: 1.1fr 1fr; gap:22px; align-items:center;
       margin:32px 0;
@@ -45,7 +45,7 @@
     }
     .btn:hover{filter:brightness(1.07)}
 
-    /* Bloco artigo */
+    /* Article */
     .article {
       margin:20px 0 40px;
       border:1px solid var(--border);
@@ -57,23 +57,22 @@
     .article h2{margin:0 0 12px; font-size: clamp(1.3rem, 2.6vw, 1.6rem)}
     .article p{color:var(--muted); margin:0 0 14px; text-align:justify}
 
-    /* Lista de benefícios */
+    /* Benefits */
     .benefits{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:14px; margin-top:8px}
-    .chip{
-      border:1px solid var(--border); background:#0f0f0f; border-radius:12px; padding:14px;
-    }
+    .chip{border:1px solid var(--border); background:#0f0f0f; border-radius:12px; padding:14px;}
     .chip strong{display:block; margin-bottom:6px}
 
     /* Footer */
     footer{padding:40px 0; margin-top:40px; border-top:1px solid var(--border)}
-    .footer-grid{
-      display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
+    .footer-grid{display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
     .footer-card{background:#0f0f0f; border:1px solid var(--border); border-radius:14px; padding:18px;}
     .footer-card h4{color:var(--brand-2); margin:0 0 10px}
     .socials{display:flex; gap:12px; margin-top:6px}
     .socials img{height:28px; width:28px}
     .copy{text-align:center; margin-top:28px; font-size:.9rem; color:#a8a8a8}
+
+    /* Logo do rodapé reduzido */
+    .footer-brand img{height:80px; width:auto;}
 
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
@@ -82,7 +81,7 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
+  <!-- Header -->
   <header>
     <div class="container topbar">
       <div class="brand">
@@ -93,8 +92,9 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Main -->
   <main class="container">
+    <!-- Hero -->
     <section class="hero">
       <img src="seco.jpg" alt="Robô realizando limpeza a seco em módulos solares">
       <div>
@@ -158,7 +158,6 @@
           <img src="logo1.png" alt="Logo Grupo Sentinel">
         </div>
         <p>Temos o que você quer, somos o que você precisa.</p>
-     
         <div class="socials">
           <a href="#"><img src="instagram.png" alt="Instagram"></a>
           <a href="#"><img src="facebook.png" alt="Facebook"></a>
